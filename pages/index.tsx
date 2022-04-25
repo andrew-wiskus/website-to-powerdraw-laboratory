@@ -145,7 +145,7 @@ class Home extends React.Component<any, any> {
 }
 
 function hslString(hsl: any) {
-	return `H:${hsl.h},S:${Math.floor(100 * hsl.s)},L:${Math.floor(100 * hsl.l)}`
+	return `H:${Math.floor(100 * hsl.h)},S:${Math.floor(100 * hsl.s)},L:${Math.floor(100 * hsl.l)}`
 }
 
 export default Home
