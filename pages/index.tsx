@@ -75,23 +75,27 @@ class Home extends React.Component<any, any> {
 
 	render() {
 		return (
-			<div style={{ height: `100vh`, width: `100vw`, position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, backgroundColor: this.state.bg.hex }}>
-				<div style={{
-					cursor: 'pointer',
-					position: 'absolute', top: 20, right: 20,
-					height: 80, width: 80, paddingTop: 20, paddingBottom: 20, backgroundColor: 'black', borderRadius: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
-				}}
-					onClick={() => this.setState({ menuIsVisible: true })}
+			<>
+				<div style={{ height: `100vh`, width: `100vw`, position: 'fixed', top: 0, left: 0, bottom: 0, right: 0, backgroundColor: this.state.bg.hex }}>
+					<div style={{
+						cursor: 'pointer',
+						position: 'absolute', top: 20, right: 20,
+						height: 80, width: 80, paddingTop: 20, paddingBottom: 20, backgroundColor: 'black', borderRadius: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
+					}}
+						onClick={() => this.setState({ menuIsVisible: true })}
 
-				>
-					<div style={{ width: 47, height: 5, backgroundColor: 'yellow', margin: 3 }} />
-					<div style={{ width: 47, height: 5, backgroundColor: 'yellow', margin: 3 }} />
-					<div style={{ width: 47, height: 5, backgroundColor: 'yellow', margin: 3 }} />
-				</div>
+					>
+						<div style={{ width: 47, height: 5, backgroundColor: 'yellow', margin: 3 }} />
+						<div style={{ width: 47, height: 5, backgroundColor: 'yellow', margin: 3 }} />
+						<div style={{ width: 47, height: 5, backgroundColor: 'yellow', margin: 3 }} />
+					</div>
+
+
+				</div >
 
 				{this.state.menuIsVisible &&
 
-					<div style={{ color: '#ddd', paddingLeft: 20, width: '100vw', maxWidth: 350, backgroundColor: '#222', position: 'absolute', right: 0, top: 0, height: '100vh' }}>
+					<div style={{ color: '#ddd', paddingLeft: 20, width: '100vw', maxWidth: 350, backgroundColor: '#222', position: 'absolute', right: 0, top: 0, minHeight: '100vh', paddingBottom: 100 }}>
 						<div style={{
 							cursor: 'pointer',
 							position: 'absolute', top: 20, right: 20,
@@ -135,7 +139,7 @@ class Home extends React.Component<any, any> {
 						})}
 					</div>
 				}
-			</div >
+			</>
 		)
 	}
 }
